@@ -1,0 +1,60 @@
+<html>
+    <head>
+        <title>login page</title>
+        <link rel="stylesheet" href="#">
+        <style>
+            .content{
+                width:100%;
+                border:1px solid lightgrey;
+            }
+            .container{
+                width:80%;
+                left:10%;
+                border:1px solid black;
+                position:relative;
+                background-color: lightskyblue;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="content">
+            <div class="container"> 
+                <center>
+              <h1 style="color:blueviolet">WELCOME TO LOGIN PAGE</h1>    
+               <table>
+                 <tr>
+                      <td>
+                           <center><img src="login.png" alt="can't display" width="200px" , height="200px"/></center><br/><br/>
+                           <label>Username</label>
+                           <input type="email"  placeholder="enter your username" id="id1"><br/><br/>
+                            <label>password</label>
+                            <input type="password" placeholder="enter your password" id="id2"></br></br>
+                            <center>                   
+                            <button onclick="f()"> Login </button>
+                            </center> <br/>
+                            <b id="res"></b>
+                       </td>
+                  </tr>
+                </table> 
+                </center>
+            </div>
+        </div>
+    </body>
+    <script type="text/javascript">
+       function f(){ 
+           let username=document.getElementById("id1").value        
+           let password=document.getElementById("id2").value                                 
+           const p = 9904 
+           if(username==""||password=="")
+           {
+             document.getElementById("res").innerHTML="please enter your details properly"            
+            }
+            else if(password==p){
+                document.getElementById("res").innerHTML="you entered the correct password login Successful"
+            }
+            else{
+                document.getElementById("res").innerHTML="you entered the wrong password login failed"
+            }
+        }
+    </script>
+</html>
